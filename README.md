@@ -1,4 +1,6 @@
-## DATABASE
+# 📚 Sistem Peminjaman Buku
+
+Sistem ini merupakan aplikasi sederhana untuk mengelola peminjaman buku oleh pengguna.
 
 ```mermaid
 
@@ -8,7 +10,6 @@ direction LR
 BUKU ||--o{ KATEGORI : termasukdalam
 BUKU }o--|| RAK-BUKU : disimpan
 BUKU ||--o{ PETUGAS : dikelola
-BUKU }o--o{ PEMINJAM : dipinjam
 BUKU ||--o{ TRANSAKSI : memiliki
 BUKU {
 string id_buku PK
@@ -37,7 +38,7 @@ PETUGAS {
 string id_petugas PK
 string nama_petugas
 }
-PEMINJAM ||--o{ TRANSAKSI : memiliki
+PEMINJAM ||--o{ TRANSAKSI : melakukan
 PEMINJAM {
 string id_peminjam PK
 string nama_peminjam
@@ -48,9 +49,9 @@ TRANSAKSI {
 string id_transaksi PK
 date tgl_pinjam
 date tgl_kembali
+boolean dikembalikan
 string id_peminjam FK
 string id_buku FK
-boolean dikembalikan
 }
 
 
