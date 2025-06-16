@@ -17,12 +17,11 @@ string isbn
 string penulis
 date tgl_rilis
 string penerbit
-int cetakan
+string cetakan
 string id_kategori FK
 string id_rak_buku FK
 string id_petugas FK
-string id_peminjam FK
-string id_transaksi FK
+
 }
 KATEGORI {
 string id_ketegori PK
